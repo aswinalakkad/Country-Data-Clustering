@@ -34,7 +34,7 @@ def main():
     
     st.title('Help International Foundation')
     
-    st.subheader('This application will give the statuis of the country based on socio-economic factors')
+    st.subheader('This application will give the status of the country based on socio-economic factors')
 
     ch_mort = st.text_input('Enter the child mortality rate:')
 
@@ -64,3 +64,4 @@ def main():
 #to execute the main function 
 if __name__ == '__main__':
     main()
+
