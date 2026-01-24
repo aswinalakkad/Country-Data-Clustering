@@ -1,3 +1,31 @@
+import streamlit as st
+import numpy as np
+import pandas as pd
+import pickle 
+
+# Load the instances that were created 
+with open('final_model.pkl','rb') as file:
+    model = pickle.load(file)
+    
+with open('pca.pkl','rb') as file:
+    pca = pickle.load(file)
+    
+with open('scaler.pkl','rb') as file:
+    scaler = pickle.load(file)   
+
+def prediction(input_data):
+    
+    scaled_data = scaler.transform(input_data)
+    pca_data = pca.transform(scaled_data)
+    pred = model.predict(pca_data)[0]
+
+    if pred == 0:
+        return 'Developing'
+    elif pred == 1:
+        return 'Developed'
+    else:
+        return 'Under Developed'
+
 def main():
     st.title('Help International Foundation')
     st.subheader('This application will give the status of the country based on socio-economic factors')
@@ -22,3 +50,7 @@ def main():
         ]]
         response = prediction(input_list)
         st.success(response)
+
+# to execute the main function 
+if __name__ == '__main__':
+    main()
