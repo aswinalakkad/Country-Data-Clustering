@@ -9,7 +9,7 @@ This app was built for **Help International Foundation** to assist in identifyin
 
 ## Live Demo
 
-🔗 [Streamlit App](https://streamlit.io) *(replace with your actual link)*
+🔗 [Streamlit App](https://streamlit.io) 
 
 ## Features
 
