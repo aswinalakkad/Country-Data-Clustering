@@ -32,15 +32,15 @@ def main():
     
     st.subheader('This application will give the status of the country based on socio-economic factors')
 
-    ch_mort = st.text_input('Enter the child mortality rate:')
-    exp = st.text_input('Enter Exports (% GDP):')
-    imp = st.text_input('Enter Imports (% GDP):')
-    hel = st.text_input('Enter Expentiture on health (% GDP):')
-    inc = st.text_input('Enter average income per person')
-    inf = st.text_input('Enter Inflation rate')
-    life_exp = st.text_input('Enter Life Expectency')
-    total_fert = st.text_input('Enter number of children that would be born to each woman')
-    gdpp = st.text_input('Enter The GDP per capita')
+    ch_mort = st.number_input('Enter the child mortality rate:')
+    exp = st.number_input('Enter Exports (% GDP):')
+    imp = st.number_input('Enter Imports (% GDP):')
+    hel = st.number_input('Enter Expentiture on health (% GDP):')
+    inc = st.number_input('Enter average income per person')
+    inf = st.number_input('Enter Inflation rate')
+    life_exp = st.number_input('Enter Life Expectency')
+    total_fert = st.number_input('Enter number of children that would be born to each woman')
+    gdpp = st.number_input('Enter The GDP per capita')
 
     # save all the input in a 2d list 
     input_list = [[ch_mort, exp, imp, hel, inc, inf, life_exp, total_fert, gdpp]]
@@ -53,4 +53,5 @@ def main():
 # to execute the main function 
 if __name__ == '__main__':
     main()
+
 
